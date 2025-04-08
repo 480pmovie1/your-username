@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bgpng"
+    android:backgroundTint="#f5f5f5"
+    android:fitsSystemWindows="true"
+
+    tools:context=".MainActivity">
+    <!-- तुम्हारा पूरा layout यहीं रहेगा -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="1dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:orientation="horizontal"
+            android:background="#F24350"
+            android:gravity="center"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_alignParentBottom="true">
+
+        <!-- Toolbar -->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f20f20"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="!! श्रीमते रामानुजाय नमः !!"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/menu_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitCenter"
+                    android:outlineSpotShadowColor="@color/red"
+                    android:src="@mipmap/logo"
+                    android:background="?attr/selectableItemBackground"
+                    android:layout_gravity="start" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+            <!-- ImageView for top banner -->
+
+
+            <!-- Horizontal Scroll View with Categories -->
+
+            <ImageView
+                android:id="@+id/top_banner"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_below="@id/toolbar"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="50sp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="50sp"
+                android:src="@drawable/banner_image"
+                android:background="@color/white"/>
+
+            <HorizontalScrollView
+                android:id="@+id/category_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_banner"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:background="@drawable/aarti_rounded_box"
+                    android:padding="10sp"
+                    android:orientation="horizontal">
+
+                    <!-- Individual Category Items -->
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/banner_image4" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/banner_image5"
+                        android:layout_margin="1dp"/>
+
+
+                    <!-- Individual Category Items -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:layout_margin="1dp"
+                        android:src="@drawable/banner_image6" />
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/banner_image7"
+                        android:layout_margin="1dp"/>
+
+
+                    <!-- Individual Category Items -->
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/banner_image8"
+                        android:layout_margin="1dp"/>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/banner_image9"
+                        android:layout_margin="1dp"/>
+
+                    <!-- Add more ImageView items as needed -->
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:background="#ffff"
+                android:columnCount="1"
+                android:padding="21dp"
+                android:textAlignment="center">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="1"
+                    android:paddingBottom="11dp"
+                    android:pointerIcon="arrow"
+                    android:text="अनुष्ठान और उत्सव"
+                    android:textAlignment="center"
+                    android:textColor="#008080"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="-11dp"
+                    android:background="#4169E1"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="1"
+                    android:layout_gravity="end|center_vertical"
+                    android:paddingBottom="10sp"
+                    android:src="@android:drawable/ic_menu_more" />
+
+                <Button
+                    android:id="@+id/pujaa_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/pujaa_btn"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#455FC6"
+                    android:drawableLeft="@drawable/bell"
+                    android:drawablePadding="-11dp"
+                    android:drawableTint="@color/white"
+                    android:elevation="10dp"
+                    android:padding="12sp"
+                    android:text="पूजा और हवन सामग्री"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/ekadshi1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/ekadshi1"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#C90A07"
+                    android:drawableLeft="@drawable/calendar_account_outline"
+                    android:drawablePadding="-11dp"
+                    android:drawableTint="@color/white"
+                    android:padding="12sp"
+                    android:text="एकादशी व्रत, जयंतियाँ, एवं प्रमुख पर्व"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/kheti_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/kheti_btn"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_round4"
+                    android:drawableLeft="@drawable/tractor_variant"
+                    android:drawablePadding="-11dp"
+                    android:drawableTint="@color/white"
+                    android:padding="12sp"
+                    android:backgroundTint="#008080"
+                    android:text="कृषि क्षेत्र की माप"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:background="@drawable/aarti_rounded_box1"
+                android:elevation="5dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:id="@+id/ganesh_btn1"
+                android:padding="15dp">
+
+                <Button
+                    android:id="@+id/ganesh_btn"
+                    android:layout_below="@id/ganesh_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/img_border_ek_sath"
+                    android:scaleType="centerCrop"
+                    />
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="12dp"
+                    android:background="#EFEFEF"
+                    android:layout_gravity="start|center_vertical"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#4169E1"
+                    android:background="@drawable/aarti_rounded_corners"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Ganesh Ji"
+                        android:textColor="#ffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jai ganesh jai ganesh , mata pita mahadeva, laguw ka bhog lage jai ganesh jai ganesh........"
+                        android:textColor="@color/light_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- GridLayout for Buttons -->
+            <!--android:layout_below="@id/banner_ads_text"-->
+            <GridLayout
+                android:id="@+id/myGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_marginTop="16dp"
+                android:alignmentMode="alignMargins"
+                android:background="@drawable/dharmik_rounded_box"
+                android:columnCount="3"
+                android:outlineSpotShadowColor="@color/black"
+                android:padding="21dp"
+                android:rowCount="3"
+                android:shadowColor="@color/black">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_columnSpan="3"
+                    android:paddingBottom="11dp"
+                    android:pointerIcon="arrow"
+                    android:text="महत्वपूर्ण धार्मिक कड़ियाँ"
+                    android:textAlignment="center"
+                    android:textColor="#008080"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="155dp"
+                    android:layout_height="3dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="32dp"
+                    android:background="#ff6347" />
+
+
+                <!-- Buttons background.xml se hai -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="end|center_vertical"
+                    android:src="@android:drawable/ic_menu_more" />
+
+                <Button
+                    android:id="@+id/aaarti_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/aaarti_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#F44336"
+                    android:elevation="14dp"
+                    android:text="आरती"
+                    android:textAlignment="center"
+                    android:textColor="#ffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <Button
+
+                    android:id="@+id/chalisa_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/chalisa_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:text="चालीसा"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#FD7E00"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!-- Buttons -->
+
+                <!-- Buttons background.xml se hai -->
+                <Button
+
+                    android:id="@+id/mantra_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/mantra_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#E91E63"
+                    android:text="मंत्र जाप"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+
+                    android:id="@+id/hanuman_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/hanuman_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#3F51B5"
+                    android:text="हनुमान जी"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    />
+
+
+                <!-- Buttons -->
+                <Button
+
+                    android:id="@+id/gita_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/gita_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:text="भगवत गीता"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#4A66D4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+
+                    android:id="@+id/krishna_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/krishna_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#3F51B5"
+                    android:text="कृष्ण जी"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Buttons -->
+                <Button
+
+                    android:id="@+id/photo_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/photo_btn"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_round4"
+                    android:text="फोटो गैलरी"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#008080"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+
+                    android:id="@+id/kheti_btn1"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/kheti_btn1"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#008080"
+                    android:background="@drawable/btn_round4"
+                    android:text="खेती"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <!-- Buttons background.xml se hai -->
+                <Button
+
+                    android:id="@+id/status_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:layout_columnWeight="1"
+                    android:layout_below="@id/status_btn"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_round4"
+                    android:backgroundTint="#008080"
+                    android:text="स्टेटस अपडेट"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Button
+
+                    android:id="@+id/donot_btn"
+                    android:layout_below="@id/donot_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_round4"
+                    android:drawableLeft="@drawable/currency_rupee"
+                    android:drawablePadding="-11dp"
+                    android:drawableTint="@color/white"
+                    android:padding="25sp"
+                    android:backgroundTint="#E91E63"
+                    android:text="$ DONAT For Devlopment"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_columnSpan="3"
+                    android:layout_gravity="bottom"/>
+
+
+
+
+                <!-- Add more buttons as needed -->
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Bottom Navigation Bar -->
+    <!-- Updated index_scr.xml with click effect, current selection highlight, and activity intent -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal"
+        android:background="@drawable/navi_bar"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/home_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home_outline"
+                app:tint="@color/nav_unselected" />
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/nav_unselected"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Rituals -->
+        <LinearLayout
+            android:id="@+id/rituals_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/rituals_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/om_custom"
+                app:tint="@color/nav_unselected" />
+            <TextView
+                android:id="@+id/rituals_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rituals"
+                android:textColor="@color/nav_unselected"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Festivals -->
+        <LinearLayout
+            android:id="@+id/festivals_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/festivals_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/hands_pray"
+                app:tint="@color/nav_unselected" />
+            <TextView
+                android:id="@+id/festivals_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Festivals"
+                android:textColor="@color/nav_unselected"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Settings -->
+        <LinearLayout
+            android:id="@+id/settings_nav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:id="@+id/settings_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/account_cog"
+                app:tint="@color/nav_unselected" />
+            <TextView
+                android:id="@+id/settings_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="@color/nav_unselected"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginRight="20dp"
+        app:backgroundTint="@color/orange"
+        android:src="@android:drawable/ic_menu_share"
+        android:contentDescription="Menu" />
+
+
+
+
+
+</RelativeLayout>
